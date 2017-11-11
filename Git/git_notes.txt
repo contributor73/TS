@@ -1,0 +1,47 @@
+git --version
+
+#setup global configuration variables
+git config --global user.name "ddd"
+git config --global user.email "ddd@yahoo.com"
+
+git config --list
+
+git help config
+git config --help
+
+#two scenarious
+# 1 Initialize a repository from existing code       Start code tracking  locally
+## navigate to a working directory
+
+git init
+git status
+
+#add to gitignore file
+touch .gitignore
+
+.DS_Store
+.project
+*.pyc
+
+git status
+
+## add files to staging area
+git add -A                           git add .gitignore
+git status
+
+### remove files from staging area
+git reset                            git reset calc.py
+git status
+
+## git commit -m "Initial Commit"
+git status         #working directory clean
+
+### check
+git log
+
+
+# 2 Cloning a remote repo
+git clone <url> <where to clone>
+git clone ../remote_repo.git .            #clone repository from your computer              
+
+git clone https://github.com/ddd .   #dot mean to current working directory
